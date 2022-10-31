@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Outfit", sans-serif;
+  font-size: 18px;
+}
+
+body {
+  background-color: hsl(217, 54%, 11%);
+}
+
+/* outer-container */
+.main-container {
+  max-width: 375px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto;
+  padding: 20px;
+}
+
+/* main Card Container */
+.nft-card {
+  margin: auto;
+  padding: 20px;
+  background-color: hsl(216, 50%, 16%);
+  color: hsl(0, 0%, 100%);
+  border-radius: 15px;
+}
+
+.image-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px;
+}
+
+.image-container img {
+  width: 100%;
+  transition: transform 0.3s;
+  vertical-align: bottom;
+}
+
+#overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  z-index: 1;
+  display: none;
+  top: 0;
+  left: 0;
+  background-color: hsla(178, 100%, 50%, 0.5);
+  animation: fadeIn 0.3s;
+}
+
+.image-container .view-icon {
+  position: absolute;
+  width: 50px;
+  left: 50%;
+  margin-left: -25px;
+  top: 50%;
+  margin-top: -25px;
+  z-index: 2;
+  visibility: hidden;
+}
+
+.image-container:hover #overlay {
+  cursor: pointer;
+}
+
+.nft-card h2 {
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.nft-card h2:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
+
+.nft-card > p {
+  color: hsl(215, 51%, 70%);
+  margin-bottom: 20px;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/* Price Section Container */
+.price-container {
+  display: flex;
+  margin-bottom: 15px;
+  align-items: center;
+}
+
+.price,
+.duration {
+  display: flex;
+  flex-basis: 50%;
+  align-items: center;
+}
+
+.price img {
+  width: 0.8rem;
+}
+
+.price h2 {
+  font-size: 0.9rem;
+}
+
+.price p {
+  color: hsl(178, 100%, 50%);
+  padding-left: 5px;
+}
+
+.duration {
+  justify-content: end;
+}
+
+.duration p {
+  color: hsl(215, 51%, 70%);
+  padding-left: 5px;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+/* divider line */
+hr {
+  color: hsl(215, 32%, 27%);
+  margin-bottom: 20px;
+}
+
+/* bottom nft creator container */
+.creator-container {
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  font-weight: 300;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.creator-container img {
+  width: 30px;
+  border: 1px solid white;
+  border-radius: 50%;
+}
+
+.creator-container p {
+  padding-left: 20px;
+  color: hsl(215, 51%, 70%);
+}
+
+.creator-container span {
+  color: white;
+}
+
+.creator-container span:hover {
+  cursor: pointer;
+  color: hsl(178, 100%, 50%);
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
